@@ -14,15 +14,13 @@ namespace MVC_BusinessLogicLayer
 
         public void AddUser(User user)
         {
-            // Here, you can add any business rules or logic before passing to the DataAccessLayer
 
             userDataAccess.AddUser(user);
         }
 
         public User GetUserByUsername(string username)
         {
-            // Again, any business logic or rules could go here...
-
+          
             return userDataAccess.GetUserByUsername(username);
         }
     }
