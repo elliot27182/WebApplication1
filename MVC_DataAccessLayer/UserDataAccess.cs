@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Linq;
-using System.Web;
-using WebApplication1.Models;
+using System.Text;
+using System.Threading.Tasks;
+using System.Data.SqlClient;
+using DomainModels;
 
 namespace MVC_DataAccessLayer
 {
-    public class UserService
+    public class UserDataAccess
     {
         private string connectionString = "Data Source=DESKTOP-RQ3BRI1\\SQLEXPRESS;Initial Catalog=master;User ID=sa;Password=123456;Connect Timeout=30";
 
