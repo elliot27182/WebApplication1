@@ -62,15 +62,15 @@ namespace WebApplication1.Controllers
                 userService.AddUser(user);
 
                 //Redirect to the GetUser action to retrieve the data from the database
-                return RedirectToAction("GetUser", new { username = user.Username });
+                return RedirectToAction("GetUser", new { id = user.Id });
             }
 
             return View("Index");
         }
 
-        public ActionResult GetUser(string username)
+        public ActionResult GetUser(int Id)
         {
-            User user = userService.GetUserByUsername(username);
+            User user = userService.GetUserByUsername(Id);
             if (user != null)
             {
                 // Map from User to UserViewModel

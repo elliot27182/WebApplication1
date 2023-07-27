@@ -26,5 +26,7 @@ namespace TestWebApplication.Models
 
         public HttpPostedFileBase Image { get; set; }
         public string ImagePath { get; set; }
+
+        public int Id { get; set; }
     }
 }

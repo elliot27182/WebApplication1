@@ -226,6 +226,10 @@
       <Project>{437b333f-411e-4c43-b544-0fcfeabfbdcc}</Project>
       <Name>MVC_BusinessLogicLayer</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MVC_DataAccessLayer\MVC_DataAccessLayer.csproj">
+      <Project>{10ce77bc-d16d-4e59-9faa-13025e7b5fe4}</Project>
+      <Name>MVC_DataAccessLayer</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

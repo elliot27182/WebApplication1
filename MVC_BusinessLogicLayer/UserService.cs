@@ -18,10 +18,10 @@ namespace MVC_BusinessLogicLayer
             userDataAccess.AddUser(user);
         }
 
-        public User GetUserByUsername(string username)
+        public User GetUserByUsername(int Id)
         {
           
-            return userDataAccess.GetUserByUsername(username);
+            return userDataAccess.GetUserByUsername(Id);
         }
     }
 }
