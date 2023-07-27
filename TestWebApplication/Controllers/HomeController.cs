@@ -5,9 +5,8 @@ using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using TestWebApplication.Models;
 using MVC_BusinessLogicLayer;
-using DomainModels;
+using MVC_DataAccessLayer;
 
 
 
@@ -51,18 +50,12 @@ namespace WebApplication1.Controllers
                 }
 
                 // Map from UserViewModel to User
-                var user = new User
-                {
-                    Username = userViewModel.Username,
-                    Email = userViewModel.Email,
-                    Password = userViewModel.Password,
-                    ImagePath = userViewModel.ImagePath
-                };
+      
 
-                userService.AddUser(user);
+                userService.AddUser(userViewModel);
 
                 //Redirect to the GetUser action to retrieve the data from the database
-                return RedirectToAction("GetUser", new { username = user.Username });
+                return RedirectToAction("GetUser", new { username = userViewModel.Username });
             }
 
             return View("Index");
@@ -70,7 +63,7 @@ namespace WebApplication1.Controllers
 
         public ActionResult GetUser(string username)
         {
-            User user = userService.GetUserByUsername(username);
+            UserViewModel user = userService.GetUserByUsername(username);
             if (user != null)
             {
                 // Map from User to UserViewModel

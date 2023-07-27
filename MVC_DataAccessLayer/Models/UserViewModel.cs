@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace TestWebApplication.Models
+namespace MVC_DataAccessLayer
 {
     public class UserViewModel
     {

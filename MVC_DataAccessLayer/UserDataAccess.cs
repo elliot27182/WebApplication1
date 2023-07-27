@@ -4,15 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
-using DomainModels;
+
 
 namespace MVC_DataAccessLayer
 {
     public class UserDataAccess
     {
-        private string connectionString = "Data Source=DESKTOP-RQ3BRI1\\SQLEXPRESS;Initial Catalog=master;User ID=sa;Password=123456;Connect Timeout=30";
+        private string connectionString = "Data Source=DESKTOP-RQ3BRI1\\SQLEXPRESS;Initial Catalog=master;User ID=sa;Password=000;Connect Timeout=30";
 
-        public void AddUser(User user)
+        public void AddUser(UserViewModel user)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -30,7 +30,7 @@ namespace MVC_DataAccessLayer
             }
         }
 
-        public User GetUserByUsername(string username)
+        public UserViewModel GetUserByUsername(string username)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -43,7 +43,7 @@ namespace MVC_DataAccessLayer
                     if (reader.HasRows)
                     {
                         reader.Read();
-                        return new User
+                        return new UserViewModel
                         {
                             Username = reader.GetString(reader.GetOrdinal("Username")),
                             Email = reader.GetString(reader.GetOrdinal("Email")),

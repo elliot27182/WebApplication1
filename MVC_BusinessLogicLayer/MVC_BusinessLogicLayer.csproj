@@ -31,9 +31,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MVC_DataAccessLayer">
-      <HintPath>..\MVC_DataAccessLayer\bin\Debug\MVC_DataAccessLayer.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -48,9 +45,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DomainModels\DomainModels.csproj">
-      <Project>{3360b987-07b2-4ff2-a90f-913ed7b902fa}</Project>
-      <Name>DomainModels</Name>
+    <ProjectReference Include="..\MVC_DataAccessLayer\MVC_DataAccessLayer.csproj">
+      <Project>{10ce77bc-d16d-4e59-9faa-13025e7b5fe4}</Project>
+      <Name>MVC_DataAccessLayer</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

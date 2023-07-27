@@ -5,8 +5,6 @@ VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestWebApplication", "TestWebApplication.csproj", "{3DA1F9AC-EC9A-452A-87C0-E375B40563D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainModels", "..\DomainModels\DomainModels.csproj", "{3360B987-07B2-4FF2-A90F-913ED7B902FA}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC_BusinessLogicLayer", "..\MVC_BusinessLogicLayer\MVC_BusinessLogicLayer.csproj", "{437B333F-411E-4C43-B544-0FCFEABFBDCC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC_DataAccessLayer", "..\MVC_DataAccessLayer\MVC_DataAccessLayer.csproj", "{10CE77BC-D16D-4E59-9FAA-13025E7B5FE4}"
@@ -21,10 +19,6 @@ Global
 		{3DA1F9AC-EC9A-452A-87C0-E375B40563D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3DA1F9AC-EC9A-452A-87C0-E375B40563D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3DA1F9AC-EC9A-452A-87C0-E375B40563D4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3360B987-07B2-4FF2-A90F-913ED7B902FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3360B987-07B2-4FF2-A90F-913ED7B902FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3360B987-07B2-4FF2-A90F-913ED7B902FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3360B987-07B2-4FF2-A90F-913ED7B902FA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{437B333F-411E-4C43-B544-0FCFEABFBDCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{437B333F-411E-4C43-B544-0FCFEABFBDCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{437B333F-411E-4C43-B544-0FCFEABFBDCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
