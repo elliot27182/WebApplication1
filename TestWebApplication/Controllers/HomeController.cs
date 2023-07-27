@@ -6,16 +6,22 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using TestWebApplication.Models;
-using MVC_BusinessLogicLayer;
-using DomainModels;
-
 
 
 namespace WebApplication1.Controllers
 {
     public class HomeController : Controller
     {
-        private UserService userService = new UserService();
+       
+        private readonly masterEntities _context;
+
+        public HomeController() : this(new masterEntities())
+        {
+        }
+        public HomeController(masterEntities context)
+        {
+            _context = context;
+        }
         public ActionResult Index()
         {
             return View();
@@ -51,7 +57,7 @@ namespace WebApplication1.Controllers
                 }
 
                 // Map from UserViewModel to User
-                var user = new User
+                var user = new Users
                 {
                     Username = userViewModel.Username,
                     Email = userViewModel.Email,
@@ -59,7 +65,8 @@ namespace WebApplication1.Controllers
                     ImagePath = userViewModel.ImagePath
                 };
 
-                userService.AddUser(user);
+                _context.Users.Add(user);
+                _context.SaveChanges();
 
                 //Redirect to the GetUser action to retrieve the data from the database
                 return RedirectToAction("GetUser", new { id = user.Id });
@@ -68,12 +75,12 @@ namespace WebApplication1.Controllers
             return View("Index");
         }
 
-        public ActionResult GetUser(int Id)
+        public ActionResult GetUser(int id)  // changed from string username to int id
         {
-            User user = userService.GetUserByUsername(Id);
+            Users user = _context.Users.Find(id);  // use Find to get the user by Id
             if (user != null)
             {
-                // Map from User to UserViewModel
+                // Map from Users to UserViewModel
                 var userViewModel = new UserViewModel
                 {
                     Username = user.Username,
